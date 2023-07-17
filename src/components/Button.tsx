@@ -3,9 +3,12 @@ import React from "react";
 
 const Button = () => {
 
-  return (
-    <button>ИМЯ</button>
-  );
+    return (
+        <div className={'btn'}>
+            <button>ИМЯ</button>
+        </div>
+
+    );
 };
 
 export default Button;
