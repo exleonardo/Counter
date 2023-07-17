@@ -1,6 +1,6 @@
 .App {
     text-align: center;
-    border: 2px solid #7e9576;
+    border: 2px solid #FAEBD7;
     width: 500px;
     height: 500px;
     margin: 20px auto;
@@ -10,7 +10,7 @@
 }
 
 .buttons {
-    border: 2px solid #7e9576;
+    border: 2px solid #FAEBD7;
     width: 400px;
     height: 100px;
     margin: auto;
@@ -31,18 +31,18 @@
     font-size: 18px;
     letter-spacing: 1px;
     text-decoration: none;
-    color: #7e9576;
+    color: #FAEBD7;
     background: transparent;
     cursor: pointer;
     transition: ease-out 0.5s;
-    border: 2px solid #7e9576;
+    border: 2px solid #FAEBD7;
     border-radius: 10px;
-    box-shadow: inset 0 0 0 0 #7e9576;
+    box-shadow: inset 0 0 0 0 #FAEBD7;
 }
 
 .btn:hover {
     color: white;
-    box-shadow: inset 0 -100px 0 0 #7e9576;
+    box-shadow: inset 0 -100px 0 0 #FAEBD7;
 }
 
 .btn:active {
@@ -50,7 +50,7 @@
 }
 
 .Header {
-    border: 2px solid #7e9576;
+    border: 2px solid #FAEBD7;
     width: 400px;
     height: 300px;
 
@@ -60,6 +60,6 @@
     align-items: center;
     border-radius: 5px;
     font-size: 70px;
-    color: #7e9576;
+    color: #FAEBD7;
 }
 
