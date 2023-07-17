@@ -1,14 +1,65 @@
 .App {
     text-align: center;
-    border: 2px solid #488645;
+    border: 2px solid #7e9576;
     width: 500px;
+    height: 500px;
     margin: 20px auto;
+    border-radius: 7px;
+    filter: blur(3px);
+    background-image: url("https://cms-assets.themuse.com/media/lead/_1200x630_crop_center-center_82_none/01212022-1047259374-coding-classes_scanrail.jpg?mtime=1642798879");
+}
+
+.buttons {
+    border: 2px solid #7e9576;
+    width: 400px;
+    height: 100px;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border-radius: 5px;
 }
 
 .btn {
-
+    width: 150px;
+    position: relative;
+    display: inline-block;
+    margin: 15px;
+    padding: 15px 30px;
+    text-align: center;
+    font-size: 18px;
+    letter-spacing: 1px;
+    text-decoration: none;
+    color: #7e9576;
+    background: transparent;
+    cursor: pointer;
+    transition: ease-out 0.5s;
+    border: 2px solid #7e9576;
+    border-radius: 10px;
+    box-shadow: inset 0 0 0 0 #7e9576;
 }
 
-.header {
-
+.btn:hover {
+    color: white;
+    box-shadow: inset 0 -100px 0 0 #7e9576;
 }
+
+.btn:active {
+    transform: scale(0.9);
+}
+
+.Header {
+    border: 2px solid #7e9576;
+    width: 400px;
+    height: 300px;
+
+    margin: 20px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    font-size: 70px;
+    color: #7e9576;
+}
+
