@@ -10,7 +10,7 @@ const Button = (props:ButtonType) => {
 
   return (
 
-    <button onClick={callBack} disabled={!hide}>{name}</button>
+    <button className={'btn'} onClick={callBack} disabled={!hide}>{name}</button>
   );
 };
 
