@@ -12,8 +12,6 @@ function App() {
 const resetInc = ()=>{
   setInc(0)
 }
-
-
     return (
         <div>
               <div>{inc}</div>
