@@ -1,15 +1,22 @@
-import React, {useState} from 'react';
+import React, { useState } from "react";
+
 import './App.css';
 import Button from "./components/Button";
 
 function App() {
+  let [inc,setInc]= useState<number>(0)
 
-    let [counter, setCounter] = useState(0)
-
+  const iteration = ()=>{
+    setInc(++inc)
+  }
+const resetInc = ()=>{
+  setInc(0)
+}
     return (
-        <div className="App">
-            <h1 className={'header'}>{counter}</h1>
-            <Button/>
+        <div>
+              <div>{inc}</div>
+            <Button name={"inc"} callBack={iteration}/>
+            <Button name={"reset"} callBack={resetInc}/>
         </div>
     );
 }
