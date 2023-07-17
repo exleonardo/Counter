@@ -17,17 +17,15 @@ function App() {
         setInc(0)
     }
 
-    return (
-        <div>
-            <div className={"App"}>
-                <div className={'Header'}><h1>{inc}</h1></div>
-                <div className={'buttons'}>
-                    <Button name={"inc"} callBack={iteration} hide={maxValue > inc}/>
-                    <Button name={"reset"} callBack={resetInc} hide={inc > minValue}/>
-                </div>
-            </div>
-        </div>
-    );
+  return (
+    <div className={"App"}>
+      <div className={maxValue>inc?'Header':"HeaderError"}><h1>{inc}</h1></div>
+      <div className={'buttons'}>
+        <Button name={"inc"} callBack={iteration} hide={maxValue>inc}/>
+        <Button name={"reset"} callBack={resetInc}  hide={inc>minValue} />
+      </div>
+    </div>
+  );
 }
 
 export default App;

@@ -5,7 +5,7 @@
     height: 500px;
     margin: 20px auto;
     border-radius: 7px;
-    background-image: url("https://cms-assets.themuse.com/media/lead/_1200x630_crop_center-center_82_none/01212022-1047259374-coding-classes_scanrail.jpg?mtime=1642798879");
+    background-image: url("bg.jpg");
 }
 
 .buttons {
@@ -89,4 +89,15 @@
     font-size: 70px;
     color: #FAEBD7;
 }
-
+.HeaderError{
+    border: 2px solid rgba(255, 0, 35, 0.98);
+    width: 400px;
+    height: 300px;
+    margin: 20px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    font-size: 70px;
+    color: rgba(255, 0, 35, 0.98);
+}
