@@ -1,21 +1,21 @@
-import React, { useState } from "react";
+import React, {useState} from "react";
 
 import './App.css';
 import Button from "./components/Button";
 
 function App() {
 
-  let [inc,setInc]= useState<number>(0);
-  let minValue = 0;
-  let maxValue = 5;
+    let [inc, setInc] = useState<number>(0);
+    let minValue = 0;
+    let maxValue = 5;
 
-  const iteration = ()=>{
-    minValue++
-    setInc(++inc)
-  }
-  const resetInc = ()=>{
-  setInc(0)
-}
+    const iteration = () => {
+        minValue++
+        setInc(++inc)
+    }
+    const resetInc = () => {
+        setInc(0)
+    }
 
   return (
     <div className={"App"}>
@@ -27,4 +27,5 @@ function App() {
     </div>
   );
 }
+
 export default App;
