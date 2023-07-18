@@ -1,0 +1,67 @@
+.buttons {
+    border: 2px solid #FAEBD7;
+    width: 400px;
+    height: 100px;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border-radius: 5px;
+}
+
+.btn {
+    width: 150px;
+    position: relative;
+    display: inline-block;
+    margin: 15px;
+    padding: 15px 30px;
+    text-align: center;
+    font-size: 18px;
+    letter-spacing: 1px;
+    text-decoration: none;
+    color: #FAEBD7;
+    background: transparent;
+    cursor: pointer;
+    transition: ease-out 0.5s;
+    border: 2px solid #FAEBD7;
+    border-radius: 10px;
+    box-shadow: inset 0 0 0 0 #FAEBD7;
+}
+
+.btn:hover {
+    color: white;
+    box-shadow: inset 0 -100px 0 0 #FAEBD7;
+}
+
+.btn:active {
+    transform: scale(0.9);
+}
+
+.btn:disabled {
+    width: 150px;
+    position: relative;
+    display: inline-block;
+    margin: 15px;
+    padding: 15px 30px;
+    text-align: center;
+    font-size: 18px;
+    letter-spacing: 1px;
+    text-decoration: none;
+    color: #ff0000;
+    background: transparent;
+    cursor: pointer;
+    transition: ease-out 0.5s;
+    border: 2px solid #ff0000;
+    border-radius: 10px;
+    box-shadow: inset 0 0 0 0 #ff0000;
+}
+
+.btn:hover:disabled {
+    color: white;
+    box-shadow: inset 0 -100px 0 0 #ff0000;
+}
+
+.btn:active:disabled {
+    transform: scale(0.9);
+}
