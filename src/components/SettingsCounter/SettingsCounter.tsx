@@ -1,28 +1,20 @@
-import React, {useState} from 'react';
-import SettingsButtons from "./SettingsButtons";
+import React from 'react';
+import SettingsButtons from "./SettingsButtons/SettingsButtons";
+import MaxValue from "./Values/MaxValue/MaxValue";
+import StartValue from "./Values/StartValue/StartValue";
 
 
 const SettingsCounter = () => {
 
-    let [maxValue, setMaxValue] = useState(0)
-
     const callBack = () => {
-        localStorage.setItem()
+        // localStorage.setItem()
     }
 
     return (
         <div>
-            <div>
-                <p>Max value:</p>
-                <input type="number"/>
-            </div>
-            <div>
-                <p>Start value:</p>
-                <input type="number"/>
-            </div>
-            <div>
-                <SettingsButtons callBack={callBack}/>
-            </div>
+            <MaxValue/>
+            <StartValue/>
+            <SettingsButtons callBack={callBack}/>
         </div>
     );
 };
