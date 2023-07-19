@@ -2,6 +2,7 @@ import React, {useState} from "react";
 import './App.css';
 import Button from "./components/Buttons/Button";
 import s from "./components/Buttons/Button.module.css"
+import SettingsCounter from "./components/SettingsCounter/SettingsCounter";
 
 function App() {
 
@@ -23,6 +24,9 @@ function App() {
             <div className={s.buttons}>
                 <Button name={"inc"} callBack={iteration} hide={maxValue > inc}/>
                 <Button name={"reset"} callBack={resetInc} hide={inc > minValue}/>
+            </div>
+            <div>
+                <SettingsCounter/>
             </div>
         </div>
     );
