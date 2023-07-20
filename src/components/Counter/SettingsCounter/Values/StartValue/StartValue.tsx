@@ -4,6 +4,7 @@ import React, { ChangeEvent } from "react";
 type StartValue = {
   getMinValue:(value:string)=>void
   setValue:string
+  error:boolean
 }
 const StartValue = (props:StartValue) => {
   const {getMinValue,setValue}=props

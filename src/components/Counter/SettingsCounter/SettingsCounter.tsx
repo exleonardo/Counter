@@ -9,14 +9,15 @@ type SettingsCounterType ={
     callBack:()=>void;
     setMinValue:string
     setMaxValue:string
+    error:boolean
 }
 const SettingsCounter = (props:SettingsCounterType) => {
-const {getMinValue,getMaxValue,callBack,setMinValue,setMaxValue} = props
+const {getMinValue,getMaxValue,callBack,setMinValue,setMaxValue,error} = props
 
     return (
         <div>
             <MaxValue getMaxValue={getMaxValue} setMaxValue={setMaxValue} />
-            <StartValue getMinValue={getMinValue} setValue={setMinValue} />
+            <StartValue getMinValue={getMinValue} setValue={setMinValue} error={error} />
             <Button name={"SET"} callBack={callBack} hide={setMinValue}/>
         </div>
     );

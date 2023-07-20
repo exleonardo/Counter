@@ -10,9 +10,12 @@ const Counter = (props:CounterType) => {
   //--------------- Set Min Max Value ----------------------
   let [maxValue,setMaxValue]=useState<string>("")
   let [minValue,setMinValue]=useState<string>("")
+  //---------------------- ERROR ---------------------------
+  let [error,setError]=useState(false)
+
   //--------------- Initial Min Max NumberCallBack ---------
   let minValueCallback:number = +minValue;
-  let maxValueCallback:number = +maxValue;
+  let maxValueCallback:number = +maxValue?+maxValue:5;// checking a value for empty
   //------------------Set value to state----------------------
 
   const getMaxValue = (value:string)=>{
@@ -20,6 +23,12 @@ const Counter = (props:CounterType) => {
   }
   const getMinValue =  (value:string)=>{
     setMinValue(value)
+    //The condition for checking a negative number
+    if(+value<0){
+      setError(true)
+    }else{
+      setError(false)
+    }
   }
   //-------- Button Click and set value on display ----------
   const buttonSetNumber = ()=>{
@@ -37,12 +46,12 @@ const Counter = (props:CounterType) => {
 
   return (
     <div>
-      <NumberDisplay maxValue={maxValueCallback} inc={inc} />
+      <NumberDisplay maxValue={maxValueCallback} inc={inc} error={error} />
       <div className={s.buttons}>
         <Button name={"inc"} callBack={iteration} hide={inc<maxValueCallback}/>
         <Button name={"reset"} callBack={resetInc} hide={inc}/>
       </div>
-      <SettingsCounter getMinValue={getMinValue} getMaxValue={getMaxValue} callBack={buttonSetNumber} setMaxValue={maxValue} setMinValue={minValue}/>
+      <SettingsCounter error={error} getMinValue={getMinValue} getMaxValue={getMaxValue} callBack={buttonSetNumber} setMaxValue={maxValue} setMinValue={minValue}/>
     </div>
   );
 };
