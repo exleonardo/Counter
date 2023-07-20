@@ -4,6 +4,7 @@ import SettingsCounter from "./SettingsCounter/SettingsCounter";
 import s from "./Button/Button.module.css";
 import Button from "./Button/Button";
 
+
 type CounterType = {}
 const Counter = (props:CounterType) => {
   let [inc, setInc] = useState<number>(0);
@@ -12,23 +13,27 @@ const Counter = (props:CounterType) => {
   let [minValue,setMinValue]=useState<string>("")
   //---------------------- ERROR ---------------------------
   let [error,setError]=useState(false)
-
   //--------------- Initial Min Max NumberCallBack ---------
   let minValueCallback:number = +minValue;
   let maxValueCallback:number = +maxValue?+maxValue:5;// checking a value for empty
-  //------------------Set value to state----------------------
-
-  const getMaxValue = (value:string)=>{
-    setMaxValue(value)
-  }
-  const getMinValue =  (value:string)=>{
-    setMinValue(value)
-    //The condition for checking a negative number
+//----------------- Check a negative value -----------------
+  const checkNegativeValue = (value:string)=>{
     if(+value<0){
       setError(true)
     }else{
       setError(false)
     }
+  }
+  //------------------Set value to state----------------------
+  const getMaxValue = (value:string)=>{
+    setMaxValue(value)
+    checkNegativeValue(value)
+    if(value===minValue){
+    }
+  }
+  const getMinValue =  (value:string)=>{
+    setMinValue(value)
+    checkNegativeValue(value)
   }
   //-------- Button Click and set value on display ----------
   const buttonSetNumber = ()=>{
@@ -51,9 +56,11 @@ const Counter = (props:CounterType) => {
         <Button name={"inc"} callBack={iteration} hide={inc<maxValueCallback}/>
         <Button name={"reset"} callBack={resetInc} hide={inc}/>
       </div>
-      <SettingsCounter error={error} getMinValue={getMinValue} getMaxValue={getMaxValue} callBack={buttonSetNumber} setMaxValue={maxValue} setMinValue={minValue}/>
+      <SettingsCounter error={error}  getMinValue={getMinValue} getMaxValue={getMaxValue} callBack={buttonSetNumber} setMaxValue={maxValue} setMinValue={minValue}/>
     </div>
   );
 };
 
 export default Counter;
+
+//---
