@@ -54,17 +54,17 @@ const Counter = (props: CounterType) => {
     setInc(0)
   }
 
-  return (
-    <div>
-      <NumberDisplay maxValue={ maxValueCallback } inc={ inc } error={ error }/>
-      <div className={ s.buttons }>
-        <Button name={ "inc" } callBack={ iteration } hide={ inc < maxValueCallback }/>
-        <Button name={ "reset" } callBack={ resetInc } hide={ inc }/>
-      </div>
-      <SettingsCounter error={ error } getMinValue={ getMinValue } getMaxValue={ getMaxValue }
-                       callBack={ buttonSetNumber } setMaxValue={ maxValue } setMinValue={ minValue }/>
-    </div>
-  );
+    return (
+        <div>
+            <NumberDisplay maxValue={maxValueCallback} inc={inc} error={error}/>
+            <div className={s.buttons}>
+                <Button name={"INC"} callBack={iteration} hide={inc < maxValueCallback}/>
+                <Button name={"RESET"} callBack={resetInc} hide={inc}/>
+            </div>
+            <SettingsCounter error={error} getMinValue={getMinValue} getMaxValue={getMaxValue}
+                             callBack={buttonSetNumber} setMaxValue={maxValue} setMinValue={minValue}/>
+        </div>
+    );
 };
 
 export default Counter;
