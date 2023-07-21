@@ -1,7 +1,7 @@
 import React from 'react';
 
 type SettingsButtonsPropsType = {
-    callBack: () => void
+    callBack:()=>void
 }
 
 const SettingsButtons = (props: SettingsButtonsPropsType) => {
