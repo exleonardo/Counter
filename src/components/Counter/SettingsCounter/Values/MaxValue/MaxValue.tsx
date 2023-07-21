@@ -1,21 +1,22 @@
-import React, { ChangeEvent } from "react";
-import s from "../StartValue/StartValue.module.css";
+import React, {ChangeEvent} from "react";
+import s from "../MaxValue/MaxValue.module.css";
 
 type MaxValueType = {
-  getMaxValue:(value:string)=>void
-  setMaxValue:string
+    getMaxValue: (value: string) => void
+    setMaxValue: string
 }
-const MaxValue = (props:MaxValueType) => {
-const {getMaxValue,setMaxValue}=props
+const MaxValue = (props: MaxValueType) => {
+    const {getMaxValue, setMaxValue} = props
 
-  const styleErrorInput = +setMaxValue<0?s.error:s.truth
-  const onChangeInputValue =(e:ChangeEvent<HTMLInputElement>)=>{
-    getMaxValue(e.currentTarget.value)
-  }
+    const styleErrorInput = +setMaxValue < 0 ? s.error : s.truth
+    const onChangeInputValue = (e: ChangeEvent<HTMLInputElement>) => {
+        getMaxValue(e.currentTarget.value)
+    }
     return (
-        <div>
-            <div>Max value:</div>
-            <input className={styleErrorInput} onChange={onChangeInputValue} placeholder={"Get max number"} type="number" value={setMaxValue}/>
+        <div className={s.maxValue}>
+            <div>MAX VALUE</div>
+            <input className={styleErrorInput} onChange={onChangeInputValue} placeholder={"Get max number"}
+                   type="number" value={setMaxValue}/>
         </div>
     );
 };

@@ -1,24 +1,23 @@
-import React, { ChangeEvent } from "react";
+import React, {ChangeEvent} from "react";
 import s from "./StartValue.module.css"
-import { Simulate } from "react-dom/test-utils";
-import error = Simulate.error;
 
 type StartValue = {
-  getMinValue:(value:string)=>void
-  setValue:string
+    getMinValue: (value: string) => void
+    setValue: string
 }
-const StartValue = (props:StartValue) => {
-  const {getMinValue,setValue}=props
-  const styleErrorInput = +setValue<0?s.error:s.truth
+const StartValue = (props: StartValue) => {
+    const {getMinValue, setValue} = props
+    const styleErrorInput = +setValue < 0 ? s.error : s.truth
 
-  const onChangeInputValue =(e:ChangeEvent<HTMLInputElement>)=>{
-    const value = e.currentTarget.value
-    getMinValue(value)
-  }
+    const onChangeInputValue = (e: ChangeEvent<HTMLInputElement>) => {
+        const value = e.currentTarget.value
+        getMinValue(value)
+    }
     return (
-        <div>
-            <div>Start value:</div>
-            <input className={styleErrorInput} placeholder={"Enter positive number"} onChange={onChangeInputValue} value={setValue} type="number"/>
+        <div className={s.startValue}>
+            <div>START VALUE</div>
+            <input className={styleErrorInput} placeholder={"Enter positive number"} onChange={onChangeInputValue}
+                   value={setValue} type="number"/>
         </div>
     );
 };

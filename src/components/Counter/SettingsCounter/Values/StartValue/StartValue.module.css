@@ -1,8 +1,25 @@
-.error{
+.error {
     border-color: red;
     outline: none;
     color: red;
 }
-.truth:focus{
+
+.truth:focus {
     outline: none;
+}
+
+.startValue {
+    display: flex;
+    width: 150px;
+    margin: 0;
+    flex-direction: column;
+    align-items: center;
+    color: #FAEBD7;
+}
+
+.startValue input {
+    width: 80%;
+    background: transparent;
+    border-radius: 4px;
+    color: #FAEBD7;
 }

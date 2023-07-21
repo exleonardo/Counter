@@ -1,0 +1,11 @@
+.settings {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    border: 2px solid #FAEBD7;
+    width: 400px;
+    height: 130px;
+    margin: 20px auto;
+    border-radius: 5px;
+}
