@@ -18,9 +18,10 @@
 
 .maxValue input {
     width: 80%;
-    background: transparent;
+    background: #FAEBD7;
     border-radius: 4px;
-    color: #FAEBD7;
+    color: black;
+    border: 2px solid #FAEBD7
 }
 
 
