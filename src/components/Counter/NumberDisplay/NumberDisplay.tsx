@@ -10,7 +10,7 @@ type NumberDisplayType = {
 }
 const NumberDisplay = (props: NumberDisplayType) => {
   const {inc, error, maxValue, minValue} = props
-  const messageDispay = () => {
+  const messageDisplay = () => {
     if (error) {
       return <div className={ s.Header }>Enter values and press SET</div>
     } else if (maxValue < 0 || minValue < 0 || ( maxValue === minValue )) {
@@ -24,7 +24,7 @@ const NumberDisplay = (props: NumberDisplayType) => {
 
   return (
     <div>
-      { messageDispay() }
+      { messageDisplay() }
     </div>
   );
 };
