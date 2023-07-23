@@ -5,8 +5,7 @@ import s from "./Button/Button.module.css";
 import Button from "./Button/Button";
 
 
-type CounterType = {}
-const Counter = (props: CounterType) => {
+const Counter = () => {
   let [ inc, setInc ] = useState<number>(0);
   //--------------- Set Min Max Value ----------------------
   let [ maxValue, setMaxValue ] = useState<string>("")
