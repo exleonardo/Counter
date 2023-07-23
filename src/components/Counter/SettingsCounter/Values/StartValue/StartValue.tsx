@@ -4,12 +4,12 @@ import s from "./StartValue.module.css"
 
 type StartValue = {
   getMinValue: (value: string) => void
-  setValue: string;
+  setMinValue: string;
   setMaxValue: string;
 }
 const StartValue = (props: StartValue) => {
-  const {getMinValue, setValue, setMaxValue} = props
-  const styleErrorInput = +setValue < 0 || +setMaxValue === +setValue || +setValue > +setMaxValue ? s.error : s.truth
+  const {getMinValue, setMinValue, setMaxValue} = props
+  const styleErrorInput = +setMinValue < 0 || +setMaxValue === +setMinValue || +setMinValue > +setMaxValue ? s.error : s.truth
 
   const onChangeInputValue = (e: ChangeEvent<HTMLInputElement>) => {
     const value = e.currentTarget.value
@@ -19,7 +19,7 @@ const StartValue = (props: StartValue) => {
     <div className={ s.startValue }>
       <div>START VALUE</div>
       <input className={ styleErrorInput } placeholder={ "Enter positive number" } onChange={ onChangeInputValue }
-             value={ setValue } type="number"/>
+             value={ setMinValue } type="number"/>
     </div>
   );
 };

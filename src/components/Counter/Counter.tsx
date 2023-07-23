@@ -16,7 +16,7 @@ const Counter = (props: CounterType) => {
   let [ errorButton, setErrorButton ] = useState(false)
   //--------------- Initial Min Max NumberCallBack ---------
   let minValueCallback: number = +minValue;
-  let maxValueCallback: number = +maxValue ? +maxValue : 0;// checking a value for empty
+  let maxValueCallback: number = +maxValue;
 
   //------------------Set value to state----------------------
   const getMaxValue = (value: string) => {
@@ -25,10 +25,14 @@ const Counter = (props: CounterType) => {
       setError(false)
       setErrorButton(true)
     } else if (+value < +minValue) {
+      setErrorButton(true)
       setError(false)
     } else if (value === minValue) {
       setError(false)
     } else if (+value >= 0 && +minValue < 0) {
+      setErrorButton(true)
+      setError(false)
+    } else if (minValue === "") {
       setErrorButton(true)
       setError(false)
     } else {
@@ -41,11 +45,15 @@ const Counter = (props: CounterType) => {
     if (+value < 0) {
       setErrorButton(true)
       setError(false)
-    } else if (+value > maxValueCallback) {
+    } else if (+value > +maxValue) {
+      setErrorButton(true)
       setError(false)
     } else if (value === maxValue) {
       setError(false)
     } else if (+value >= 0 && +maxValue < 0) {
+      setErrorButton(true)
+      setError(false)
+    } else if (maxValue === "") {
       setErrorButton(true)
       setError(false)
     } else {
@@ -58,11 +66,17 @@ const Counter = (props: CounterType) => {
     setInc(minValueCallback)
     setError(false)
     setErrorButton(false)
+    localStorage.setItem("counterValue", JSON.stringify(minValueCallback))
+    let min = localStorage.getItem("counterValue")
+    if (min) {
+      setMinValue(min)
+    }
+
   }
   //--------- Increment value on display -------------------
   const iteration = () => {
     minValueCallback++
-    setInc(++inc)
+    setInc(inc + 1)
   }
   //--------- Reset Value to default -----------------------
   const resetInc = () => {

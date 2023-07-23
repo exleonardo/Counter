@@ -19,7 +19,7 @@ const SettingsCounter = (props: SettingsCounterType) => {
   return (
     <div className={ s.settings }>
       <MaxValue getMaxValue={ getMaxValue } setMaxValue={ setMaxValue } setMinValue={ setMinValue }/>
-      <StartValue getMinValue={ getMinValue } setValue={ setMinValue } setMaxValue={ setMaxValue }/>
+      <StartValue getMinValue={ getMinValue } setMinValue={ setMinValue } setMaxValue={ setMaxValue }/>
       <Button name={ "SET" } callBack={ callBack } hide={ !error }/>
     </div>
   );
