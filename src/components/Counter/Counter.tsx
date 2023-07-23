@@ -4,7 +4,7 @@ import SettingsCounter from "./SettingsCounter/SettingsCounter";
 import s from "./Button/Button.module.css";
 import Button from "./Button/Button";
 
-
+//NE TROGAT'
 type CounterType = {}
 const Counter = (props: CounterType) => {
   let [ inc, setInc ] = useState<number>(0);
