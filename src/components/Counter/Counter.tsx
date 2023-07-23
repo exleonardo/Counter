@@ -98,4 +98,3 @@ const Counter = (props: CounterType) => {
 
 export default Counter;
 
-//---
